@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px
+;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+
+    <div class="gallery">
+        <img src="img/test1.jpg" alt="샘플사진1">
+        <img src="img/test2.jpg" alt="샘플사진2">
+        <img src="img/test3.jpg" alt="샘플사진3">
+        <img src="img/test4.jpg" alt="샘플사진4">
+        <img src="img/test5.jpg" alt="샘플사진5">
+        <img src="img/test6.jpg" alt="샘플사진6">
+        <img src="img/test7.jpg" alt="샘플사진7">
+    </div>
+</body>
+</html>

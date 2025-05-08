@@ -1,3 +1,8 @@
+a {
+    text-decoration-line: none;
+    color: black;
+}
+
 #grid {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -25,4 +30,22 @@ h1 {
 
 #article {
     padding-left: 25px;
+    padding-right: 25px;
 }
+
+
+.hi {
+    padding: 10px;
+    border: 5px black solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hihi {
+    margin: 5px;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 7px;
+    text-align: center;
+}
+
