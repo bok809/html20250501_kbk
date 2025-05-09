@@ -9,84 +9,6 @@
 </head>
 
 <body>
-    <style>
-        @keyframes fadeSlideIn {
-
-            /* 초기, 중간, 마지막 단계 총 3단계 화면에 표시 */
-            0% {
-                opacity: 0;
-                transform: translateY(50px) scale(0.9) rotate(-5deg);
-            }
-
-            50% {
-                opacity: 0.5;
-                transform: translateY(10px) scale(1.02) rotate(2deg);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0px) scale(1) rotate(0deg);
-            }
-        }
-
-        .photozone {
-            background-color: white;
-            border-radius: 8px;
-            padding: 8px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-            animation-name: fadeSlideIn;
-            animation-duration: 1.5s;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0.2s;
-            animation-iteration-count: 1;
-            animation-direction: normal;
-            animation-fill-mode: both;
-            animation-play-state: running;
-        }
-
-        .photozone:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .photozone:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .photozone:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .photozone:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .photozone:nth-child(5) {
-            animation-delay: 0.5s;
-        }
-
-        .photozone:nth-child(6) {
-            animation-delay: 0.6s;
-        }
-
-        .photozone:nth-child(7) {
-            animation-delay: 0.7s;
-        }
-
-        .photozone img {
-            width: 200px;
-            height: 200px;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto;
-            transition: transform 0.2s;
-            cursor: pointer; 
-        }
-
-        .photozone img:hover {
-            transform: scale(1.03);
-        }
-    </style>
 
     <!-- 홈페이지 기본 틀 -->
     <h1><a href="index.html">WEB</a></h1>
@@ -108,24 +30,31 @@
             <div class="container">
                 <div class="photozone">
                     <img src="img/test1.jpg" alt="샘플사진1">
+                    <p class="caption">YORU</p>
                 </div>
                 <div class="photozone">
                     <img src="img/test2.jpg" alt="샘플사진2">
+                    <p class="caption">HUZI-MOUNTAIN</p>
                 </div>
                 <div class="photozone">
                     <img src="img/test3.jpg" alt="샘플사진3">
+                    <p class="caption">SINSA</p>
                 </div>
                 <div class="photozone">
                     <img src="img/test4.jpg" alt="샘플사진4">
+                    <p class="caption">TREE</p>
                 </div>
                 <div class="photozone">
                     <img src="img/test5.jpg" alt="샘플사진5">
+                    <p class="caption">CASTLE</p>
                 </div>
                 <div class="photozone">
                     <img src="img/test6.jpg" alt="샘플사진6">
+                    <p class="caption">YUKATA</p>
                 </div>
                 <div class="photozone">
                     <img src="img/test7.jpg" alt="샘플사진7">
+                    <p class="caption">SUZUME</p>
                 </div>
             </div>
 
@@ -136,18 +65,23 @@
             <div class="container">
                 <div class="photozone">
                     <img src="img/product1.jpg" alt="샘플사진1">
+                    <p class="caption">AIRPODS</p>
                 </div>
                 <div class="photozone">
                     <img src="img/product2.jpg" alt="샘플사진2">
+                    <p class="caption">COMPUTER</p>
                 </div>
                 <div class="photozone">
                     <img src="img/product3.jpg" alt="샘플사진3">
+                    <p class="caption">NINTENDO SWITCH</p>
                 </div>
                 <div class="photozone">
                     <img src="img/product4.jpg" alt="샘플사진4">
+                    <p class="caption">SOCCER BALL</p>
                 </div>
                 <div class="photozone">
                     <img src="img/product5.jpg" alt="샘플사진5">
+                    <p class="caption">i-phone</p>
                 </div>
             </div>
         </div>
