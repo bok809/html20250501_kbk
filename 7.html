@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <style>
+        @keyframes fadeSlideIn {
+
+            /* 초기, 중간, 마지막 단계 총 3단계 화면에 표시 */
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9) rotate(-5deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateY(10px) scale(1.02) rotate(2deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px) scale(1) rotate(0deg);
+            }
+        }
+
+        .photozone {
+            background-color: white;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            animation-name: fadeSlideIn;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: both;
+            animation-play-state: running;
+        }
+
+        .photozone img {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.2s;
+        }
+
+        .photozone img:hover {
+            transform: scale(1.03);
+            transform: rotate(10deg);
+        }
+    </style>
+
+    <!-- 홈페이지 기본 틀 -->
+    <h1><a href="index.html">WEB</a></h1>
+
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+            <li><a href="4.html">Profile</a></li>
+            <li><a href="5.html">Profile2</a></li>
+            <li><a href="6.html">Photo Zone</a></li>
+        </ol>
+
+        <!-- 사진첩 -->
+        <div id="article">
+            <h2>사진첩</h2>
+            <div class="container">
+                <div class="photozone">
+                    <img src="img/test1.jpg" alt="샘플사진1">
+                </div>
+                <div class="photozone">
+                    <img src="img/test2.jpg" alt="샘플사진2">
+                </div>
+                <div class="photozone">
+                    <img src="img/test3.jpg" alt="샘플사진3">
+                </div>
+                <div class="photozone">
+                    <img src="img/test4.jpg" alt="샘플사진4">
+                </div>
+                <div class="photozone">
+                    <img src="img/test5.jpg" alt="샘플사진5">
+                </div>
+                <div class="photozone">
+                    <img src="img/test6.jpg" alt="샘플사진6">
+                </div>
+                <div class="photozone">
+                    <img src="img/test7.jpg" alt="샘플사진7">
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <!-- 상품 목록 -->
+            <h2>상품 목록</h2>
+            <div class="container">
+                <div class="photozone">
+                    <img src="img/product1.jpg" alt="샘플사진1">
+                </div>
+                <div class="photozone">
+                    <img src="img/product2.jpg" alt="샘플사진2">
+                </div>
+                <div class="photozone">
+                    <img src="img/product3.jpg" alt="샘플사진3">
+                </div>
+                <div class="photozone">
+                    <img src="img/product4.jpg" alt="샘플사진4">
+                </div>
+                <div class="photozone">
+                    <img src="img/product5.jpg" alt="샘플사진5">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
