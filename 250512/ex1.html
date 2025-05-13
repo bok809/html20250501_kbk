@@ -9,9 +9,31 @@
 
 <body>
     <h1>script 태그를 이용한 연습</h1>
-    <input type="button" value="hide" onclick="
-    document.querySelector('sample_img1').style.display=none">
     <img id="sample_img1" src="/img/test1.jpg" alt="샘플이미지1" width="300px">
+    <br>
+    <!-- 방법1 -->
+    <input type="button" value="hide" onclick="
+    document.querySelector('#sample_img1').style.display='none'">
+    <input type="button" value="show" onclick="
+    document.querySelector('#sample_img1').style.display='inline'">
+    <br>
+    <!-- 방법2 -->
+    <input type="button" id="bt1" value="hide-방법2">
+    <input type="button" id="bt1_2" value="show-방법2">
+    <br>
+    <!-- 방법3 -->
+    <input type="button" id="bt2" value="hide-방법3">
+    <input type="button" id="bt3" value="show-방법3">
+    <br>
+    <!-- 방법4 -->
+    <input type="button" id="bt4" value="hide-방법4">
+    <input type="button" id="bt5" value="show-방법4">
+    <br>
+    <!-- 함수이용 -->
+    <input type="button" value="hide-함수이용" onclick="way2()">
+    <input type="button" value="show-함수이용" onclick="way2_1()">
+
+
     <h2>자바스크립트 문법을 연습 방법, script 태그 사용 가능,
         2번째, 콘솔에서 확인 가능.
         문자열의 내장 기능 중 , .length 속성, 문자열의 갯수 파악.
@@ -46,6 +68,43 @@
         document.write('안녕하세요, 월요팅 해봐요^^')
         document.write('<br>')
         document.write(1 + 1)
+
+
+        var x = 1 //옛날 방식
+        let x2 = 2 //요즘 방식
+
+        //함수이용
+        function way2() {
+            document.querySelector('#sample_img1').style.display = 'none'
+        }
+        function way2_1() {
+            document.querySelector('#sample_img1').style.display = 'inline'
+        }
+
+        //방법2
+        document.getElementById('bt1').onclick = function () {
+            document.querySelector('#sample_img1').style.display = 'none'
+        }
+        document.getElementById('bt1_2').onclick = function () {
+            document.querySelector('#sample_img1').style.display = 'inline'
+        }
+
+        //방법3
+        const btn = document.getElementById('bt2')
+        const btn2 = document.getElementById('bt3')
+        btn.addEventListener('click',
+            function () { document.querySelector('#sample_img1').style.display = 'none' })
+        btn2.addEventListener('click',
+            function () { document.querySelector('#sample_img1').style.display = 'inline' })
+
+        //방법4
+        const mouseClick = () => document.querySelector('#sample_img1').style.display = 'none'
+        const btn4 = document.getElementById('bt4')
+        btn4.addEventListener('click', mouseClick)
+
+        const mouseClick2 = () => document.querySelector('#sample_img1').style.display = 'inline'
+        const btn5 = document.getElementById('bt5')
+        btn5.addEventListener('click', mouseClick2)
     </script>
     <p>1+1</p>
 </body>

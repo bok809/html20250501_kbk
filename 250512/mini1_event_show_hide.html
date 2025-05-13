@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>이벤트 핸들러 방법 2~4 확인, 추가로 버튼 하나로 조건문 이용</h1>
+    <img src="/img/coding.jpg" width="300px" alt="test 이미지" id="test-img">
+    <h2>방법2</h2>
+    <input type="button" value="방법2-hide" id="btn-test2-hide">
+    <input type="button" value="방법2-show" id="btn-test2-show">
+    <h2>방법3</h2>
+    <input type="button" value="방법3-hide" id="btn-test3-hide">
+    <input type="button" value="방법3-show" id="btn-test3-show">
+    <h2>방법4</h2>
+    <input type="button" value="방법4-hide" id="btn-test4-hide">
+    <input type="button" value="방법4-show" id="btn-test4-show">
+    <h2>이미지 숨기기/보이기 하나의 버튼으로</h2>
+    <input type="button" value="hide" id="toggle_btn">
+
+    <script>
+        // 방법2
+        document.getElementById('btn-test2-hide').onclick = function () {
+            document.querySelector('#test-img').style.display = 'none'
+        }
+        document.getElementById('btn-test2-show').onclick = function () {
+            document.querySelector('#test-img').style.display = 'inline'
+        }
+
+        // 방법3
+        const btn = document.getElementById('btn-test3-hide')
+        btn.addEventListener('click',
+            function () { document.querySelector('#test-img').style.display = 'none' })
+
+        const btn2 = document.getElementById('btn-test3-show')
+        btn2.addEventListener('click',
+            function () { document.querySelector('#test-img').style.display = 'inline' })
+
+        // 방법4
+        const hideClick = () => document.querySelector('#test-img').style.display = 'none'
+        const btn3 = document.getElementById('btn-test4-hide')
+        btn3.addEventListener('click', hideClick)
+
+        const showClick = () => document.querySelector('#test-img').style.display = 'inline'
+        const btn4 = document.getElementById('btn-test4-show')
+        btn4.addEventListener('click', showClick)
+
+        const img = document.querySelector('#test-img')
+        const toggleBtn = document.getElementById('toggle_btn')
+        const toggleClick = () => {
+            if (img.style.display === 'none') {
+                img.style.display = 'inline'
+                toggleBtn.value = 'hide'
+            } else {
+                img.style.display = 'none'
+                toggleBtn.value = 'show'
+            }
+        }
+        toggleBtn.addEventListener('click',toggleClick)
+
+    </script>
+</body>
+
+</html>

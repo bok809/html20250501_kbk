@@ -16,6 +16,8 @@
     <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white'
     document.querySelector('body').style.color='black'">
 
+    <input type="button" value="day/night" onclick="toggleTheme()">
+
     <div id="grid">
         <ol>
             <li><a href="1.html">HTML</a></li>
@@ -55,6 +57,18 @@
             </p>
         </div>
     </div>
+
+    <script>
+        function toggleTheme() {
+            if (document.querySelector('body').style.backgroundColor === 'black') {
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('body').style.color = 'black';
+            } else {
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('body').style.color = 'white';
+            }
+        }
+    </script>
 </body>
 
 </html>
