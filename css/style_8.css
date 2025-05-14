@@ -17,7 +17,8 @@ ul {
 
 #container {
     margin: 0 auto;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 header {
@@ -103,7 +104,6 @@ main h3 {
     align-items: flex-start;
     margin-bottom: 30px;
 }
-
 
 .japan p {
     margin: 0 0 10px 0;
